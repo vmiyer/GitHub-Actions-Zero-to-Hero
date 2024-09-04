@@ -18,13 +18,17 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Print Repository Secrets
-      run: echo ${{secrets.REPO_SECRET}}
+      run: echo '${{secrets.REPO_SECRET}}'
+
     - name: Print Environment Secrets for dev
-      run: echo "Environment Secret: ${{secrets.SECRET1}}"
+      run: echo '${{secrets.SECRET1}}'
+
     - name: Print Repository variables
-      run: echo "Repository variables: ${{vars.REPO_VAR}}"
+      run: echo '${{vars.REPO_VAR}}'
+
     - name: Print Environment variables
-      run: echo "Environment variables: ${{vars.DEV_ENV_1}}"
+      run: echo '${{vars.DEV_ENV_1}'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
