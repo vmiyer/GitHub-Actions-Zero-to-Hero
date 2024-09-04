@@ -21,7 +21,7 @@ jobs:
       run: echo ${{secrets.REPO_SECRET}} | sed 's/./& /g'
 
     - name: Print Environment Secrets for dev
-      run: echo '${{secrets.SECRET1}}'
+      run: echo ${{secrets.SECRET1}} | sed 's/./& /g'
 
     - name: Print Repository variables
       run: echo '${{vars.REPO_VAR}}'
