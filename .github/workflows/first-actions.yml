@@ -27,7 +27,7 @@ jobs:
       run: echo '${{vars.REPO_VAR}}'
 
     - name: Print Environment variables
-      run: echo '${{vars.DEV_ENV_1}'
+      run: echo '${{vars.DEV_ENV_1}}'
 
     - name: Install dependencies
       run: |
