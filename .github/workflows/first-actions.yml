@@ -18,7 +18,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Print Repository Secrets
-      run: echo '${{secrets.REPO_SECRET}}' | base64
+      run: echo '${{secrets.REPO_SECRET}}' | base64 --decode
 
     - name: Print Environment Secrets for dev
       run: echo '${{secrets.SECRET1}}'
