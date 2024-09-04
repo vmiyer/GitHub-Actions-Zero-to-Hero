@@ -17,8 +17,14 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: checking secrets
+    - name: Print Repository Secrets
       run: echo ${{secrets.REPO_SECRET}}
+    - name: Print Environment Secrets for dev
+      run: echo "Environment Secret: ${{secrets.SECRET1}}"
+    - name: Print Repository variables
+      run: echo "Repository variables: ${{vars.REPO_VAR}}"
+    - name: Print Environment variables
+      run: echo "Environment variables: ${{vars.DEV_ENV_1}}"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
